@@ -19,8 +19,8 @@ ROOT_DIR=$DIR/..
 cd $ROOT_DIR
 
 VERSION=${1:-latest}
-PUSH=${2:-0}
-IMAGE=ghcr.io/opennmt/ctranslate2
+PUSH=${2:-1}
+IMAGE="981604548033.dkr.ecr.ap-northeast-2.amazonaws.com/ctranslate2"
 
 build()
 {
@@ -43,3 +43,4 @@ build()
 }
 
 build Dockerfile ubuntu20.04-cuda12.2
+
