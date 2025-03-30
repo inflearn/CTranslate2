@@ -102,8 +102,7 @@ ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CTRANSLATE2_ROOT/lib
 
 COPY --from=builder $CTRANSLATE2_ROOT $CTRANSLATE2_ROOT
 
-RUN python3.9 -m pip install --no-cache-dir $CTRANSLATE2_ROOT/*.whl && \
-    rm $CTRANSLATE2_ROOT/*.whl
+RUN python3.9 -m pip install --no-cache-dir $CTRANSLATE2_ROOT/*.whl
 
 ENTRYPOINT ["/opt/ctranslate2/bin/ct2-translator"]
 
